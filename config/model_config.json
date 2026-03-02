@@ -1,0 +1,8 @@
+{
+  "mispricing_quantile": 0.85,
+  "classification_cutoff": 0.5,
+  "regression_model_path": "models/regression/xgb_regressor_model.joblib",
+  "classifier_model_path": "models/classification/xgb_classifier_model.joblib",
+  "scaler_path": "models/artifacts/scaler.joblib",
+  "pca_path": "models/artifacts/pca.joblib"
+}
