@@ -105,11 +105,12 @@ if btn:
         st.subheader("💡 Feature Explainer (SHAP)")
         st.info("This chart shows how each feature influenced the model's price prediction.")
         
-        # Use the full_df returned from inference for SHAP
+        # SHAP Visualization
         shap_values = explain_prediction(result["full_df"])
         fig, ax = plt.subplots(figsize=(10, 6))
-        shap.plots.waterfall(shap_values[0], max_display=10, show=False)
+        shap.plots.waterfall(shap_values, max_display=10, show=False) # Changed from shap_values[0]
         st.pyplot(fig)
+        plt.clf()
 
         # --- DOWNLOAD BUTTON ---
         st.divider()
