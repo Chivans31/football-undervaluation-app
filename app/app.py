@@ -108,7 +108,7 @@ if btn:
         # SHAP Visualization
         shap_values = explain_prediction(result["full_df"])
         fig, ax = plt.subplots(figsize=(10, 6))
-        shap.plots.waterfall(shap_values, max_display=10, show=False) # Changed from shap_values[0]
+        shap.plots.waterfall(shap_values[0], max_display=10, show=False) # Changed from shap_values[0]
         st.pyplot(fig)
         plt.clf()
 
