@@ -1,6 +1,6 @@
 # Data Handling
 pandas<2.3.3
-numpy==2.4.2
+numpy<2.0.0
 
 # Machine Learning
 scikit-learn==1.6.1
