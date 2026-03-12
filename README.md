@@ -1,5 +1,7 @@
 # ⚽ Football Scout AI: Undervalued Player Detection
 
+![App Screenshot](assets/dashboard.png)
+
 An end-to-end machine learning application designed to identify market mispricing in the football transfer market. By combining **BERT-processed news sentiment** with historical market data, the tool estimates a "Fair Market Value" and flags potential investment opportunities.
 
 
