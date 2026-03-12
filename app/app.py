@@ -53,7 +53,7 @@ def generate_pdf(result, input_data):
     return bytes(pdf.output())
 
 # --- STREAMLIT UI ---
-st.set_page_config(page_title="Football Scout AI", layout="centered", page_icon="⚽")
+st.set_page_config(page_title="Football Scout AI", layout="wide", page_icon="⚽")
 st.title("⚽ Undervalued Player Detection")
 st.markdown("---")
 
