@@ -90,34 +90,31 @@ if btn:
         # Calculate Delta
         price_diff = result['expected_market_value'] - val
         
-        m1, m2, m3 = st.columns(3)
+        m1, m2 = st.columns(2)
         m1.metric("Expected Fair Value", f"€{result['expected_market_value']:,.0f}", delta=f"€{price_diff:,.0f}")
         m2.metric("Mispricing Score", f"{result['mispricing_score']:.3f}")
-        m3.metric("AI Confidence", f"{result['undervalued_probability']:.1%}")
-
+        
         if result["is_undervalued"]:
-            st.success("🎯 Verdict: UNDERVALUED ASSET")
+            st.success("🎯 Verdict: UNDERVALUED ASSET", icon="✅")
             st.balloons()
         else:
-            st.warning("⚖️ Verdict: FAIRLY PRICED / OVERVALUED")
+            st.warning("⚖️ Verdict: FAIRLY PRICED / OVERVALUED", icon="⚠️")
 
-        st.divider()
+        # Reduce space before SHAP
         st.subheader("💡 Feature Explainer (SHAP)")
-        st.info("This chart shows how each feature influenced the model's price prediction.")
         
         # SHAP Visualization
         shap_values = explain_prediction(result["full_df"])
-        fig, ax = plt.subplots(figsize=(10, 6))
+        fig, ax = plt.subplots(figsize=(8, 4))
         shap.plots.waterfall(shap_values[0], max_display=10, show=False) # Changed from shap_values[0]
         st.pyplot(fig)
         plt.clf()
 
         # --- DOWNLOAD BUTTON ---
-        st.divider()
         pdf_bytes = generate_pdf(result, input_data)
         
         st.download_button(
-            label="📄 Download Detailed Scouting Report",
+            label="📄 Download Report",
             data=pdf_bytes,
             file_name=f"scout_report_{val}.pdf",
             mime="application/pdf",
