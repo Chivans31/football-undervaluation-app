@@ -11,7 +11,9 @@ An end-to-end machine learning application designed to identify market mispricin
 
 
 ## 🚀 Key Features
-* **Hybrid Valuation Brain:** Uses a Regression model (XGBoost) for price estimation and a Classification model (TabNet) to determine undervaluation probability.
+* **Hybrid Valuation Brain:** Benchmarked multiple architectures (Linear Regression, Random Forest, and TabNet). Ultimately deployed a dual XGBoost framework, a Regression model for price estimation and a Classification model to determine undervaluation probability, as it delivered the highest precision for both point-estimation and undervaluation classification. 
+
+ 
 * **Sentiment Integration:** Processes news text via BERT embeddings to factor "market hype" and media sentiment into player value.
 * **AI Explainability:** Integrated **SHAP waterfall plots** to show exactly which features (Age, News Sentiment, etc.) are driving the valuation.
 * **Automated Scouting Reports:** Generates a downloadable PDF report for agents or scouts.
