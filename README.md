@@ -2,6 +2,10 @@
 
 ![App Screenshot](assets/dashboard.PNG)
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://YOUR-URL-HERE.streamlit.app)
+
+> **Live Demo:** [Click here to try the app](https://https://football-undervaluation-app-gpvmypxbxkk5mbt2yq4ha9.streamlit.app/)
+
 An end-to-end machine learning application designed to identify market mispricing in the football transfer market. By combining **BERT-processed news sentiment** with historical market data, the tool estimates a "Fair Market Value" and flags potential investment opportunities.
 
 
